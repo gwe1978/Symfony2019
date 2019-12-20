@@ -1,0 +1,57 @@
+{# Déclaration des variables #}
+{% set nbr = 1 %}
+{% set texte = "Coucou" %}
+
+{# Affichage des variables #}
+<h1>{{ nbr }}</h1>
+<p>La variable vaut {{ texte }}</p>
+<p>Les 3 variables transmises sont : {{ var1 }} {{ var2 }} {{ var3 }}</p>
+
+{% set nbr = nbr + 5 %}
+<h1>{{ nbr }}</h1>
+
+{# Alternative #}
+{% if nbr > 10 %}
+    <p>Plus grand que 10</p>
+{% else %}
+    <p>Plus petit</p>
+{% endif %}
+
+{# Boucles #}
+<p>
+{% for cpt in 20 .. 5 %}
+    {{ cpt }}
+{% endfor %}
+</p>
+
+{% set tab=[10, 20, "Coucou", 123.456] %}
+
+{% for cpt in 0 .. 3 %}
+    <p>Case {{ cpt }} : {{ tab[cpt] }}</p>
+{% endfor %}
+
+<p>
+{% for elem in tab %}
+    {{ elem }}
+{% endfor %}
+</p>
+
+<p>
+{% for elem in tableau %}
+    {{ elem }}
+{% endfor %}
+</p>
+
+{% set tab_assoc = {"nom" : "Souris", "prix": 6.99} %}
+
+<p>{{ tab_assoc['nom'] }} : {{ tab_assoc['prix'] }} euros</p>
+
+<p>
+{% for elem in tab_assoc %}
+    {{ elem }}
+{% endfor %}
+</p>
+
+
+
+

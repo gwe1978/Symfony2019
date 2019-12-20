@@ -1,0 +1,14 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}
+    Encodage d'un personnage
+{% endblock %}
+
+{% block body %}
+    <h1>Vous avez ajouté le personnage suivant</h1>
+    <table>
+        <tr><td>Nom   </td><td>{{ personnage['nom'] }}</td></tr>
+        <tr><td>Niveau</td><td>{{ personnage['niveau'] }}</td></tr>
+        <tr><td>Classe</td><td>{{ personnage['classe'] }}</td></tr>
+    </table>
+{% endblock %}

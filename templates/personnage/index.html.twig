@@ -1,0 +1,27 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}
+    Encodage d'un personnage
+{% endblock %}
+
+{% block body %}
+    <h1>Encoder un personnage</h1>
+    <form method="post" action="/personnage/ajouter">
+        {% if erreur == 1 %}
+            <p class="erreur">ERREUR</p>
+        {% endif %}
+
+        {% for message in app.flashes('message') %}
+            <div class="erreur">
+                {{ message }}
+            </div>
+        {% endfor %}
+
+        <table>
+            <tr><td>Nom</td>   <td><input type="texte" name="nom"></td></tr>
+            <tr><td>Niveau</td><td><input type="number" name="niveau"></td></tr>
+            <tr><td>Classe</td><td><input type="texte" name="classe"></td></tr>
+        </table>
+        <input type="submit" value="AJOUTER" />
+    </form>
+{% endblock %}

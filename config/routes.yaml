@@ -1,0 +1,11 @@
+#index:
+#    path: /
+#    controller: App\Controller\DefaultController::index
+
+test_exemple:
+  path: /test/exemple
+  controller: App\Controller\TestController::exemple
+
+machin:
+  path: /machin
+  controller: App\Controller\TestController::exemple

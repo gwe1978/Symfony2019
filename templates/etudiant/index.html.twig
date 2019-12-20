@@ -1,0 +1,23 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}
+    Liste des étudiants
+{% endblock %}
+
+{% block body %}
+    <ul>
+    {% for section in tab_sections %}
+        <li>{{ section.nom }}</li>
+    {% endfor %}
+    </ul>
+
+    <table>
+        {% for etudiant in tab %}
+            <tr>
+                <td>{{ etudiant.nom }}</td>
+                <td>{{ etudiant.prenom }}</td>
+                <td>{{ etudiant.section.nom }}</td>
+            </tr>
+        {% endfor %}
+    </table>
+{% endblock %}

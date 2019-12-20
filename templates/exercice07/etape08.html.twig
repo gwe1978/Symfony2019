@@ -1,0 +1,24 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}
+    Liste des étudiants
+{% endblock %}
+
+{% block body %}
+    <h1>[Série 07] Etape 8</h1>
+
+    <table>
+        <tr>
+            <th>Nom</th>
+            <td>{{ etudiant.nom }}</td>
+        </tr>
+        <tr>
+            <th>Prénom</th>
+            <td>{{ etudiant.prenom }}</td>
+        </tr>
+        <tr>
+            <th>Naissance</th>
+            <td>{{ etudiant.naissance }}</td>
+        </tr>
+    </table>
+{% endblock %}

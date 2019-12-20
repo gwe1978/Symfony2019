@@ -1,0 +1,16 @@
+{% extends 'structure.html.twig' %}
+
+{% block title %}
+    Page A
+{% endblock %}
+
+{% set nbr=50 %}
+{% set texte="azerty" %}
+{% block body %}
+    <h1>Page A</h1>
+    <p>La variable vaut {{ nbr }}</p>
+    <p>Le texte vaut {{ texte }}</p>
+    <p>La variable var1 vaut {{ var1 }}</p>
+    <p>La variable var2 vaut {{ var2 }}</p>
+    <p>La variable var3 vaut {{ var3 }}</p>
+{% endblock %}

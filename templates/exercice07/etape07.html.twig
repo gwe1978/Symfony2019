@@ -1,0 +1,14 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}
+    Liste des étudiants
+{% endblock %}
+
+{% block body %}
+    <h1>[Série 07] Etape 7</h1>
+    <ul>
+        {% for section in tab_sections %}
+            <li><a href="/exercice07/etape06?section={{ section.nom }}">{{ section.nom }}</a></li>
+        {% endfor %}
+    </ul>
+{% endblock %}
