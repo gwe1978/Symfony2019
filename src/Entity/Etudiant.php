@@ -9,6 +9,7 @@ use Doctrine\ORM\Mapping as ORM;
  */
 class Etudiant
 {
+    ///////// TEST ////////////
     /**
      * @ORM\Id()
      * @ORM\GeneratedValue()
